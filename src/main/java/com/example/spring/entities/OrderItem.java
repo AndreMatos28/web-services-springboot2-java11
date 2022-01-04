@@ -3,7 +3,6 @@ package com.example.spring.entities;
 import com.example.spring.entities.pk.OrderItemPk;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -40,7 +39,11 @@ public class OrderItem implements Serializable {
         id.setOrder(order);
     }
 
-     public Product getProduct () {
+    public Double getSubTotal() {
+        return price * quantity;
+    }
+
+    public Product getProduct () {
         return id.getProduct();
     }
 
@@ -51,15 +54,20 @@ public class OrderItem implements Serializable {
     public Integer getQuantity () {
         return quantity;
     }
+
     public void setQuantity (Integer quantity) {
         this.quantity = quantity;
     }
+
     public Double getPrice () {
         return price;
     }
+
     public void setPrice (Double price) {
         this.price = price;
     }
+
+
 
     @Override
     public boolean equals (Object o) {
@@ -70,6 +78,7 @@ public class OrderItem implements Serializable {
         OrderItem orderItem = (OrderItem) o;
         return Objects.equals(id, orderItem.id);
     }
+
     @Override
     public int hashCode () {
         return Objects.hash(id);

@@ -1,4 +1,4 @@
-# Big Game Survey
+# web services
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/AndreMatos28/web-services-springboot2-java11/blob/master/LICENSE)
 
 # Sobre o projeto

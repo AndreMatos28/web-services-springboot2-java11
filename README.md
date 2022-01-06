@@ -16,7 +16,7 @@
 
 
 ## Modelo conceitual
-![Modelo Conceitual](https://github.com/AndreMatos28/assets/conceitual.png)
+![Modelo Conceitual](https://github.com/AndreMatos28/web-services-springboot2-java11/blob/master/assets/conceitual.png)
 
 # Tecnologias utilizadas
 ## Back end
